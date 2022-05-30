@@ -114,6 +114,7 @@ namespace Task_4
                 case SortType.Last:
                     return right;
                 case SortType.Middle:
+                    //дужки можна відкрити і скоротити)
                     return left + ((right - left + 1) / 2); // if (0, 1), need to be 1
                 default:
                     return 0;
