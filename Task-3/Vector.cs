@@ -43,7 +43,7 @@ namespace Task_3
         {
             arr = new int[n];
         }
-
+        // Не виконується основна задача конструктора
         public Vector() { }
 
         public void RandomInitialization(int a, int b)
@@ -80,7 +80,7 @@ namespace Task_3
                 }
             }
         }
-
+//треба повернути було 2 параметри через out
         public string GetLongestSeq() // знаходить найдовшу підпослідовність однакових чисел.
         {
             Pair max = new Pair(0, 0);
