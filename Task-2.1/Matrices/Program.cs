@@ -6,11 +6,11 @@ namespace Matrices_2
     {
         private int[,] matr;
         private readonly int rows, cols; // кількість строк та столбців
-
+// Змінні не іменують з великої літери
         public Matrix(int Rows, int Cols)
-        {
+        {//А по верхній межі теж треба перевіряти.
             if (Rows <= 0 || Cols <= 0)
-            {
+            {//Краще виняток, а не роздрук!
                 Console.WriteLine("Розмірність матриці недопустима");
             }
             cols = Cols;
@@ -60,6 +60,7 @@ namespace Matrices_2
             int direct_x = 1, direct_y = 1; // напрямки (спочатку вниз та вправо)
             int x = 0, y = 0; // y - строка, x - стовбець
             Clear(); // заповнення нулями
+            //Алгоритмічно заплутано. Можна простіше і читабельніше. Можу уточнити як словесно.
             do
             {
                 while ((y >= 0) && (y < rows) && (matr[y, x] == 0))
@@ -86,7 +87,7 @@ namespace Matrices_2
         private void DiagonalSnake()
         {
             if (rows != cols)
-            {
+            {// І тут треба виняток.
                 Console.WriteLine("Матриця не квадратна");
                 return;
             }
@@ -100,6 +101,7 @@ namespace Matrices_2
                     for (int i = 0; i <= level; i++) // донизу
                     {
                         matr[i, level - i] = counter;
+                        //Можна спростити.
                         matr[cols - i - 1, cols - (level - i) - 1] = cols * cols - counter + 1;
                         counter++;
                     }
@@ -138,6 +140,7 @@ namespace Matrices_2
                 }
             }
         }
+        //Цей метод має бути не в цьому класі.
         public void FillAndShow()
         {
             if (rows != cols)
