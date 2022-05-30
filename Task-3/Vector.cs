@@ -154,12 +154,12 @@ namespace Task_3
 
             return result;
         }
-
+// Краще повернути масив
         public Vector MyReverse()
         {
             Vector new_vector = new Vector(GetLength());
             for (int i = 0; i < GetLength(); i++)
-            {
+            {// Ідентифікатори краще не розпочинати з префікса new
                 new_vector[GetLength() - i - 1] = arr[i];
             }
             return new_vector;
@@ -171,7 +171,7 @@ namespace Task_3
         }
 
         public bool IsEqual(Vector vector1, Vector vector2)
-        {
+        {// А якщо обидва null?
             if (vector1 == null || vector2 == null)
                 return false;
             int len = vector1.GetLength();
@@ -186,7 +186,7 @@ namespace Task_3
         }
 
         public bool isPalindrome()
-        {
+        {// добре, але не оптимально
             return IsEqual(this.MyReverse(), this);
         }
 
