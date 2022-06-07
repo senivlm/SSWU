@@ -78,7 +78,8 @@ namespace Task_4
                 arr[i] = random.Next(a, b);
             }
         }
-
+//Тут залишилось не оптимально!
+        
         public void InitShuffle()
         {
             for (int i = 0; i < GetLength(); i++)
@@ -148,7 +149,7 @@ namespace Task_4
             int pivot = arr[Partition(left, right, sortType)];
 
             while (i <= j)
-            {
+            {//можливий вихід за межі масива, який Ви не контролюєте
                 while (arr[i] < pivot) ++i; // i = the first element larger or equal to pivot
                 while (arr[j] > pivot) --j; // j = the last element smaller or equal to pivot
 
