@@ -272,6 +272,7 @@ namespace Task_5
         }
 
         // merging two sorted files into bigger sorted file
+        // не побачила реалізації в main
         public void MergeFiles(string part1FileName, string part2FileName, string sortedFileName)
         {
             StreamReader reader1 = new StreamReader(part1FileName);
@@ -285,6 +286,7 @@ namespace Task_5
             string line2 = null;
             do
             {
+                //Нам не потрібно одночасно зчитувати і з першого і з другого файла
                 if (read1 && !reader1.EndOfStream)
                 {
                     line1 = reader1.ReadLine();
