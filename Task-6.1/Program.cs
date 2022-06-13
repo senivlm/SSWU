@@ -4,9 +4,9 @@ using System.IO;
 namespace Task_6_1
 {
     internal class Program
-    {
+    {//Файл звіту є дуже добрим!
         static void Main(string[] args)
-        {
+        {//try-блоки мають бути постійним явищем. Привчайте себе до них.
             string sourceFileName = "../../../database.txt";
             string resultFileName = "../../../zvit.txt";
 
