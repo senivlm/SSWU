@@ -19,7 +19,7 @@ namespace Task_6_1
         DateTime lastDateTaken = DateTime.MinValue; // we will find the maximal of takingDates
         double maxDebt = 0; // we will find the maximal debt
         int maxDebtFlat = 0; // the number of flat with the maximal debt
-
+// Краще клас. І розділяти інформацію про квартиру і покази.
         public struct FlatData // data for a single flat
         {
             public int flatNumber;         // flat number
@@ -47,7 +47,7 @@ namespace Task_6_1
                 throw new OutOfMemoryException("The accounting database could not be created");
             }
         }
-
+        верифікацію  у цьому випадку краще робити окремим класом.
         public Accounting(StreamReader reader) // reading from a text file
         {
             CreateEmptyData();
