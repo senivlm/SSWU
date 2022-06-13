@@ -7,7 +7,7 @@ namespace Task_6_2
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {//старайтеся, щоб mainбув лаконічним. Делегуйте розв'язування, діалог в інші класи.
             string sourceFileName = "../../../Source.txt";
             string resultFileName = "../../../Result.txt";
 
