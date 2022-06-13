@@ -6,7 +6,7 @@ using System.IO;
 namespace Task_6_2
 {
     public class Text
-    {
+    {// текст не можна поміщати в одну стрічку.
         #region variables
         string text;
         string[] paragraphs = null;
