@@ -6,7 +6,7 @@ namespace Task_8_1
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {Тут красиво все вийшло!
             string sourceFileName1 = "../../../database1.txt";
             string sourceFileName2 = "../../../database2.txt";
             string resultFileName = "../../../zvit.txt";
