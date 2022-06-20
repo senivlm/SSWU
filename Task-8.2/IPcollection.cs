@@ -22,9 +22,10 @@ namespace Task_8_2
     public class IPCollection
     {
         SortedSet<IPLogRecord> list = null;
+        
 
         public IPCollection() // create an empty collection
-        {
+        { //Можна використати анонімний клас
             IPLogRecordComparator comparator = new();
             list = new SortedSet<IPLogRecord>(comparator);
         }
@@ -40,6 +41,7 @@ namespace Task_8_2
                 while (!reader.EndOfStream)
                 {
                     string read = reader.ReadLine(); // the next line
+                    //уникайте continue;
                     if (read[0] == '*') continue; // skip a comment
                     IPLogRecord rec = new IPLogRecord();
                     int spaceIdx1 = read.IndexOf(' ', 0);
@@ -89,10 +91,12 @@ namespace Task_8_2
             {
                 writer.Write(list); // use ToString method
             }
+            //дуже добре.
             catch (Exception ex) when (ex.Message != null)
             {
                 Console.WriteLine(ex.Message); // "registering a message in journal"
             }
+            //знову закриття на іншому рівні.
             finally
             {
                 writer.Close();
