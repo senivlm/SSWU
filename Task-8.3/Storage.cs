@@ -343,7 +343,7 @@ namespace Task_8_3
             result.s_TotalWeight = totalWeight;
             return result;
         }
-
+//можна було перевантажити оператори
         public Storage Subtract(Storage storage2) // return a Storage without the elements in the second storage
         {
             decimal totalPrice = s_TotalPrice;
