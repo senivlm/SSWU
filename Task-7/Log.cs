@@ -39,6 +39,7 @@ namespace Task_7
                 string line = reader.ReadLine();
                 text.Add(line);
             }
+            // Погана практика. Закривати слід там, де відкривали. У Вас публічний метод. Якщо застосувати двічі підряд. можуть виникнути проблеми.
             reader.Close();
             errorLog = new StreamWriter(errorLogName, true); // open for appending again
         }
