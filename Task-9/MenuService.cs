@@ -5,7 +5,7 @@ using System.IO;
 namespace Task_9
 {
     internal static class MenuService
-    {
+    {// Чому не передаєте параметрами
         const string priceCurrentFileName = "../../../Prices.txt";
         const string menuFileName = "../../../Menu.txt";
         const string courseFileName = "../../../Course.txt";
@@ -41,7 +41,7 @@ namespace Task_9
                     {
                         case 0: return;
                         case 1:
-                            {
+                            {// більші реалізації рекомендовано виносити в службові методи
                                 try
                                 {
                                     if (!MenuService.TryGetMenuTotalSum(menu, priceCurrent, course, out decimal menuPrice))
