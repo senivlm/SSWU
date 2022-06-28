@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-
+// Молодець. По цій темі одна з кращих робіт
 namespace Task_10_2
 {
     class Matrix
