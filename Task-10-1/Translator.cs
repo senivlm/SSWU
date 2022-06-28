@@ -23,6 +23,7 @@ namespace Translator
         {
             this.pathToText = pathToText;
             this.pathToDictionary = pathToDictionary;
+            //неглибока копія
             this.vocabulary = vocabulary;
             this.text = text;
         }
