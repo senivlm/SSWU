@@ -20,6 +20,7 @@ namespace Task_12_1
             s_count = 0;
             s_TotalPrice = 0;
             s_TotalWeight = 0;
+            //Обробник події, як правило визначається на рівні клієнта. Якщо Ви хочете вирішувати проблему на рівні цього класу, то у Вас є можливий виклик конкретного методу і не має потреби використовувати подію.
             ExpiredProductFound = RemoveExpiredProduct; // setting event handler methods
             ExpiredProductFound += WriteExpiredProduct;
         }
@@ -34,7 +35,7 @@ namespace Task_12_1
             using (StreamWriter writer = new(utilizationLogName, true)) // append mode
                 writer.WriteLine($"{DateTime.Now:d}: Removed expired product {product}");
         }
-
+// Я півгодини шукаю, де ви її описали. Змилуйтесь над тими, кому доведеться читати код))))
         public event ExpiredProduct<ExpiredProductArgs> ExpiredProductFound; // event declaration
 
         public void AddProduct(Product product) // a template for the future method of adding a product
