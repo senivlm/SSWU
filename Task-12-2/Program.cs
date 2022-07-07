@@ -5,7 +5,8 @@ using System.Collections.Generic;
 namespace Task_12_2
 {
     internal class Program
-    {
+    {//Я не знаходжу відповідного текстового опису, тобто хотілось бачити проект і обгрунтування, а не реалізацію. 
+	    // залишився невисокий рівень абстракції
         static void Execute()
         {
             Storage.utilizationLogName = "../../../UtilizationLog.txt"; // we do not use it in this task but the log is filled anyway
