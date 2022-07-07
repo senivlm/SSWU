@@ -6,6 +6,7 @@ namespace Task_12_3
     internal class PolishNotation // Polish postfix (Reverse Polish) expression
     {
         public string Expression { get; set; }
+       // Це добре. Але щось подібне мало б бути для функцій.
         Dictionary<string, byte> operatorsPrecedence; // Operators and functions precedence (priority) table
         public bool divisionByZeroFlag = false;
 
