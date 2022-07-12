@@ -23,7 +23,7 @@ namespace Task13
                 // the handler is static but we could also make it public and use through "Shop owner" parameter here
             QueueOverflow += Shop.Shop_QueueOverflow;
         }
-
+// я вже за таке сварилась!!!!Перемістити в 15 стрічку, а ще краще зовнішнім делегат зробити.
         public delegate void QueueOverflowHandler(object sender);
 
         public static event QueueOverflowHandler QueueOverflow;
@@ -139,6 +139,7 @@ namespace Task13
             foreach (Person person in personsWithThisStatus)
             {
                 cashier.Enqueue(person); // put to the given cashier all persons with this status
+                // Прив'язка до консолі, яку слід уникнути.
                 Program.Message(
                     $"*** Person {person} is moved to Cashier #{cashier.Number} " +
                     $"(# {cashier.PersonsInQueue()} in queue)", ConsoleColor.Yellow);
