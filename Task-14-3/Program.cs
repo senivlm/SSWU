@@ -4,7 +4,7 @@ using System.IO;
 namespace Task_14_3
 {
     internal class Program
-    {
+    {// Є суттєві помилки в побудовах діаграм. Потрібно залишитись на обговорення
         static void PatternsTest()
         {
             try
