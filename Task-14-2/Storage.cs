@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.Serialization;
 
 namespace Task_14_2
-{
+{//є запитання по серіалізації
     [KnownType(typeof(Meat))]
     [KnownType(typeof(Product))]
     [KnownType(typeof(DairyProduct))]
